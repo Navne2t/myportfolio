@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/251c12b420.js" crossorigin="anonymous"></script>   
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo.png" class="logo">
+            <ul id="sidemenu">
+                <!-- <li><a href="#header" onclick="showHomeMessage()">Home</a></li> -->
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
+            </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <!-- <p id="message" style="color: green; display: none; margin-top: 10px;"></p> -->
+
+        <div class="header-text">
+            <p>SDE/Data Analyst</p>
+            <H1>Hi,I'm <span>Navneet </span><br>  From India</H1>
+        </div>
+    </div>
+</div>
+<!-- -----------about---------- -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/user.png" >
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Hello! I'm Navneet Kumar, a passionate Software Designer with a keen eye for crafting innovative and user-friendly digital experiences. I thrive on solving complex problems and turning ideas into functional and visually appealing software solutions.
+
+                    Beyond coding, I have a deep love for football, reading books, and traveling. Whether it's strategizing on the field, diving into a good book, or exploring new places, I always seek inspiration and growth from my surroundings.
+                    
+                    Currently, I'm working on building my personal portfolio website to showcase my projects and skills. I'm always open to learning new things and collaborating with like-minded individuals. Feel free to connect with me!</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    </div>
+                    <!-SKILLS->
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI?UX</span><br>Designing web interfaces</li>
+                            <li><span>Web Development</span><br>Web app Developmen</li>
+                            <li><span>App Development</span><br>Building Android/iOS apps</li>
+                        </ul>
+                    </div>
+                     <!-EDUCATION->
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2021-2025</span><br>B-Tech from Acharya Institute Of Technology ,VTU Bengaluru</li>
+                            <li><span>2018-2020</span><br>10+2 from Modern Public School ,Motihari</li>
+                            <li><span>2018</span><br>10 from cs DAV Public School ,Motihari</li>
+                        </ul>
+                    </div>
+                     <!-EXPERIENCE->
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                             <li><span>2025</span><br>Internship Skill enhancement from VTU</li>
+                            <li><span>2024</span><br>internship at AWS Clouds</li>
+                            <li><span>2023</span><br>Editor of Dept.ISE of AIT Magzine PRASTHITA 2023</li>
+                        </ul>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ---------services---------------- -->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fas fa-code"></i>
+                <h2>Software Development </h2>
+                <p>DSA,System Design,Databases(MSSQL/PostgreSQL),object-Oriented Programing</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fas fa-crop-alt"></i>
+                <h2>Data Analyst</h2>
+                <p>SQL,Excel,Python(Pandas,NumPy),Data Visualization(Tableau,Power BI)</p>
+                <a href="#">Learn more</a>
+            </div>
+            <!-- <div>
+                <i class="fab fa-app-store"></i>
+                <h2>App Design</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nulla nibh, tincidunt sit amet sapien quis.</p>
+                <a href="#">Learn more</a>
+            </div> -->
+        </div>
+    </div>
+</div> 
+<!-- ----------portfolio------------ -->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/work-1.png">
+                <div class="layer">
+                    <h3>Hangman Web Game</h3>
+                    <p>The Hangman game is a classic word-guessing game designed primarily for fun and education.</p>
+                    <a href="https://hangman-game-web.vercel.app/game"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-2.png">
+                <div class="layer">
+                    <h3>AI Mock Interview Generator</h3>
+                    <p>AI Mock Interview Generator Web Page is a website or web application that allows users to 
+                        simulate job interviews using AI </p>
+                    <a href="https://ai-mock-interviewer-phi.vercel.app/dashboard"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <!-- <div class="work">
+                <img src="images/work-3.png">
+                <div class="layer">
+                    <h3>Online Shopping App</h3>
+                    <p>The app connects you yo the talented people around the world. Download it from play store.</p>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div> -->
+        </div>
+        <a href="#" class="btn">See more</a>
+    </div>
+</div>
+<!-- ----------contact------------- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fas fa-paper-plane"></i> navneetprasad2019@gmail.com</p>
+                <p><i class="fas fa-phone-square-alt"></i>+91 9718886602</p>
+                <div class="social-icons">
+                    <a href="https://leetcode.com/u/NavneetPrasad/"><i class="fa-solid fa-code"></i></a>
+                    <a href="https://x.com/NAVNE2T45"><i class="fab fa-twitter-square"></i></a>
+                    <a href="https://github.com/Navne2t"><i class="fa-brands fa-github"></i></a>
+                    <a href="images/insta.png"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/navneet-kumar-47b03732a/"><i class="fab fa-linkedin"></i></a>
+                
+                </div>
+                <a href="images/Navneet_RESUME.pdf" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © Kevin. Made wtih <i class="fas fa-heart"></i> by <a href="https://www.youtube.com/channel/UCkjoHfkLEy7ZT4bA2myJ8xA?sub_confirmation=1">Easy Tutorials</a></p>
+    </div>
+</div>
+
+
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+<script>
+
+    var sidemeu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemeu.style.right = "0";
+    }
+    function closemenu(){
+        sidemeu.style.right = "-200px";
+    }
+
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwvplydQw9Wtnygf12MuP605rx_z08ElY1hxo1CmXBhzPucN-8SU6P6g16_vE0DN3tYbQ/exec' // add your own app script link here
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+  <!-- <script>
+  function showHomeMessage() {
+    const message = document.getElementById("message");
+    message.textContent = "You are on home page";
+    message.style.display = "block";
+
+    // Optional: Hide the message after 3 seconds
+    setTimeout(() => {
+      message.style.display = "none";
+    }, 3000);
+  }
+</script> -->
+</body>
+</html>
