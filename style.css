@@ -176,10 +176,23 @@ nav ul li a:hover::after{
 }
 .work-list{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 40px;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% - 80px) / 3); /* exactly 3 cards */
+    gap: 40px;
     margin-top: 50px;
+    overflow-x: auto; /* scroll only if more than 3 */
 }
+.work-list::-webkit-scrollbar{
+    height: 6px;
+}
+.work-list::-webkit-scrollbar-thumb{
+    background: #ff004f;
+    border-radius: 10px;
+}
+.work-list::-webkit-scrollbar-track{
+    background: transparent;
+}
+
 .work{
     border-radius: 10px;
     position: relative;
@@ -383,4 +396,165 @@ nav .fas{
     color: #61b752;
     margin-top: -40px;
     display: block;
+}
+
+/* ---------- TIMELINE SECTION ---------- */
+#timeline {
+    padding: 80px 0;
+    background: #080808;
+}
+
+.timeline-wrapper {
+    position: relative;
+    margin-top: 80px;
+}
+
+/* Center vertical line */
+.timeline-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background: #ffffff;
+}
+
+/* Timeline item */
+.timeline-item {
+    position: relative;
+    width: 50%;
+    padding: 30px 40px;
+}
+
+.timeline-item.left {
+    left: 0;
+    text-align: right;
+}
+
+.timeline-item.right {
+    left: 50%;
+    text-align: left;
+}
+
+/* Dot */
+.timeline-dot {
+    position: absolute;
+    top: 40px;
+    right: -7px;
+    width: 14px;
+    height: 14px;
+    background: #ff004f;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.timeline-item.right .timeline-dot {
+    left: -7px;
+}
+
+/* Content box */
+.timeline-content {
+    background: transparent;
+    color: #ddd;
+}
+
+.timeline-year {
+    display: block;
+    font-size: 14px;
+    color: #aaa;
+    margin-bottom: 6px;
+}
+
+/* Mobile */
+@media only screen and (max-width: 768px) {
+    .timeline-line {
+        left: 20px;
+    }
+
+    .timeline-item {
+        width: 100%;
+        padding-left: 60px;
+        padding-right: 20px;
+        text-align: left;
+    }
+
+    .timeline-item.left,
+    .timeline-item.right {
+        left: 0;
+    }
+
+    .timeline-dot {
+        left: 14px;
+        right: auto;
+    }
+}
+
+
+/* --------- Service Details (Hidden Section) --------- */
+#service-details {
+    display: none;          /* IMPORTANT: no space */
+    padding: 80px 0;
+    background: #080808;
+}
+
+#service-details p {
+    margin-top: 20px;
+    color: #ababab;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+#service-details ul {
+    margin-top: 20px;
+}
+
+#service-details ul li {
+    margin: 10px 0;
+    list-style: disc;
+    margin-left: 20px;
+    color: #ddd;
+}
+
+/* ---------- PORTFOLIO SLIDER BUTTONS ---------- */
+
+.portfolio-slider {
+    position: relative;
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider-btn:hover {
+    background: #ff004f;
+}
+
+.slider-btn.left {
+    left: -50px;
+}
+
+.slider-btn.right {
+    right: -50px;
+}
+
+/* Hide arrows on small screens (mobile swipe instead) */
+@media only screen and (max-width: 768px) {
+    .slider-btn {
+        display: none;
+    }
 }

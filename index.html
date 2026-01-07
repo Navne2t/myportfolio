@@ -9,6 +9,9 @@
     <script src="https://kit.fontawesome.com/251c12b420.js" crossorigin="anonymous"></script>   
 </head>
 <body>
+
+<!-- ---------- HEADER ---------- -->
+
 <div id="header">
     <div class="container">
         <nav>
@@ -18,8 +21,8 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#timeline">Mytimeline</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="journey.html" style="text-decoration: none; color: inherit;"> Journey</a></li>
 
                 <i class="fas fa-times" onclick="closemenu()"></i>
             </ul>
@@ -67,17 +70,17 @@
                      <!-EDUCATION->
                     <div class="tab-contents" id="education">
                         <ul>
-                            <li><span>2021-2025</span><br>B-Tech from Acharya Institute Of Technology ,VTU Bengaluru,Karnatka<br>8.39/10 CGPA</li>
-                            <li><span>2018-2020</span><br>10+2 from Modern Public School ,Motihari,Bihar<br>67.8%</li>
                             <li><span>2018</span><br>10 from cs DAV Public School ,Motihari,Bihar<br>88.4%</li>
+                            <li><span>2018-2020</span><br>10+2 from Modern Public School ,Motihari,Bihar<br>67.8%</li>
+                            <li><span>2021-2025</span><br>B-Tech from Acharya Institute Of Technology ,VTU Bengaluru,Karnatka<br>8.39/10 CGPA</li>
                         </ul>
                     </div>
                      <!-EXPERIENCE->
                     <div class="tab-contents" id="experience">
                         <ul>
-                             <li><span>2025</span><br>Internship Skill enhancement from VTU</li>
-                            <li><span>2024</span><br>Virtual Traning internship at AWS Clouds</li>
                             <li><span>2023</span><br>Editor of Dept.ISE of AIT Magzine PRASTHITA 2023</li>
+                            <li><span>2024</span><br>Virtual Traning internship at AWS Clouds</li>
+                            <li><span>2025</span><br>Internship Skill enhancement from VTU</li>
                         </ul>
                     </div>
                      <!-CERTIFIACTION->
@@ -103,14 +106,13 @@
                 <i class="fas fa-code"></i>
                 <h2> Java Backend Development</h2>
                 <p>DSA,System Design,Databases(MSSQL/PostgreSQL),object-Oriented Programing</p>
-                <a href="#">Learn more</a>
+               <a href="javascript:void(0)" onclick="openService('java')">Learn more</a>
             </div>
             <div>
                 <i class="fas fa-crop-alt"></i>
                 <h2>Full Stack Development</h2>
                 <p>HTML,CSS,JavaScript,Java,PostgreSQL,Sql,ReactJs</p>
-                <a href="#">Learn more</a>
-            </div>
+                <a href="javascript:void(0)" onclick="openService('fullstack')">Learn more</a>
             <!-- <div>
                 <i class="fab fa-app-store"></i>
                 <h2>App Design</h2>
@@ -120,40 +122,161 @@
         </div>
     </div>
 </div> 
-<!-- ----------portfolio------------ -->
+
+<!-- ----------service-details (hidden)------------ -->
+<section id="service-details">
+    <div class="container">
+        <h1 class="sub-title" id="service-title"></h1>
+        <p id="service-description"></p>
+
+        <ul id="service-points"></ul>
+
+        <a href="javascript:void(0)" class="btn" onclick="closeService()">Close</a>
+
+    </div>
+</section>
+
+
+<!-- ---------- PORTFOLIO SECTION ---------- -->
 <div id="portfolio">
     <div class="container">
         <h1 class="sub-title">My Work</h1>
-        <div class="work-list">
-            <div class="work">
-                <img src="images/work-1.png">
-                <div class="layer">
-                    <h3>Hangman Web Game</h3>
-                    <p>The Hangman game is a classic word-guessing game designed primarily for fun and education.</p>
-                    <a href="https://hangman-game-web.vercel.app/game"><i class="fas fa-external-link-alt"></i></a>
+
+        <div class="portfolio-slider">
+
+            <!-- LEFT BUTTON -->
+            <button class="slider-btn left" onclick="scrollPortfolio(-1)">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+
+            <!-- SLIDER TRACK -->
+            <div class="work-list" id="portfolio-track">
+
+                <div class="work">
+                    <img src="images/work-1.png">
+                    <div class="layer">
+                        <h3>Hangman Web Game</h3>
+                        <p>The Hangman game is a classic word-guessing game designed primarily for fun and education.</p>
+                        <a href="https://hangman-game-web.vercel.app/game" target="_blank">
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
                 </div>
+
+                <div class="work">
+                    <img src="images/work-2.png">
+                    <div class="layer">
+                        <h3>AI Mock Interview Generator</h3>
+                        <p>
+                            AI-powered platform to simulate interviews with real-time feedback and analysis.
+                        </p>
+                        <a href="https://ai-mock-interviewer-phi.vercel.app/dashboard" target="_blank">
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="work">
+                    <img src="images/work-3.png">
+                    <div class="layer">
+                        <h3>Guess My Number</h3>
+                        <p>
+                            A fun game combining number guessing with Hangman mechanics.
+                        </p>
+                        <a href="https://guess-number-hangman.vercel.app/" target="_blank">
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- <div class="work">
+                    <img src="images/work-4.png">
+                    <div class="layer">
+                        <h3>Online Shopping App</h3>
+                        <p>
+                            E-commerce application with product listing and cart functionality.
+                        </p>
+                        <a href="#" target="_blank">
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div> -->
+
             </div>
-            <div class="work">
-                <img src="images/work-2.png">
-                <div class="layer">
-                    <h3>AI Mock Interview Generator</h3>
-                    <p>AI Mock Interview Generator Web Page is a website or web application that allows users to 
-                        simulate job interviews using AI </p>
-                    <a href="https://ai-mock-interviewer-phi.vercel.app/dashboard"><i class="fas fa-external-link-alt"></i></a>
-                </div>
-            </div>
-            <!-- <div class="work">
-                <img src="images/work-3.png">
-                <div class="layer">
-                    <h3>Online Shopping App</h3>
-                    <p>The app connects you yo the talented people around the world. Download it from play store.</p>
-                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
-                </div>
-            </div> -->
+
+            <!-- RIGHT BUTTON -->
+            <button class="slider-btn right" onclick="scrollPortfolio(1)">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+
         </div>
-        <a href="#" class="btn">See more</a>
     </div>
 </div>
+
+
+<!-- ----------timeline------------ -->
+<section id="timeline">
+    <div class="container">
+        <h1 class="sub-title">My Timeline</h1>
+
+        <div class="timeline-wrapper">
+
+            <div class="timeline-line"></div>
+
+            <div class="timeline-item left">
+                <span class="timeline-dot"></span>
+                <div class="timeline-content">
+                    <span class="timeline-year">2018</span>
+                    <p><strong>Class 10</strong><br>CS DAV Public School</p>
+                </div>
+            </div>
+
+            <div class="timeline-item right">
+                <span class="timeline-dot"></span>
+                <div class="timeline-content">
+                    <span class="timeline-year">2018 – 2020</span>
+                    <p><strong>Class 12</strong><br>Modern Public School</p>
+                </div>
+            </div>
+
+            <div class="timeline-item left">
+                <span class="timeline-dot"></span>
+                <div class="timeline-content">
+                    <span class="timeline-year">2021 – 2022</span>
+                    <p><strong>B.Tech – 1st Year</strong><br>Engineering Foundation</p>
+                </div>
+            </div>
+
+            <div class="timeline-item right">
+                <span class="timeline-dot"></span>
+                <div class="timeline-content">
+                    <span class="timeline-year">2022 – 2023</span>
+                    <p><strong>B.Tech – 2nd Year</strong><br>Java, OOPs, DBMS</p>
+                </div>
+            </div>
+
+            <div class="timeline-item left">
+                <span class="timeline-dot"></span>
+                <div class="timeline-content">
+                    <span class="timeline-year">2023 – 2024</span>
+                    <p><strong>B.Tech – 3rd Year</strong><br>DSA & Web Development</p>
+                </div>
+            </div>
+
+            <div class="timeline-item right">
+                <span class="timeline-dot"></span>
+                <div class="timeline-content">
+                    <span class="timeline-year">2024 – 2025</span>
+                    <p><strong>B.Tech – Final Year</strong><br>AWS Internship</p>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</section>
+
+
 <!-- ----------contact------------- -->
 <div id="contact">
     <div class="container">
@@ -251,5 +374,6 @@
     }, 3000);
   }
 </script> -->
+<script src="script.js"></script>
 </body>
 </html>
